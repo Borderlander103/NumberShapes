@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Number Shapes</string>
+    <string name="question">Input a number to find out if it is a \ntriangular number or a square number.</string>
+    <string name="number_input">Enter number.</string>
+    <string name="triangle_image">Triangular number image.</string>
+    <string name="square_image">Square number image.</string>
+    <string name="check_number">Check \nNumber</string>
 </resources>
