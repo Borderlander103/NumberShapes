@@ -20,8 +20,43 @@ public class MainActivity extends AppCompatActivity {
 
         String mGuessString = mGuessView.getText().toString();
 
-        Toast.makeText(this, mGuessString, Toast.LENGTH_SHORT).show();
+        int mGuessInt = Integer.parseInt(mGuessString);
+
+        Number myNumber = new Number();
+
+        myNumber.number = mGuessInt;
+
+        String answer;
+
+        answer = Boolean.toString(myNumber.isTriangular());
+
+        Toast.makeText(this, answer, Toast.LENGTH_SHORT).show();
 
     }
+
+    class Number {
+
+        int number;
+
+        public boolean isTriangular() {
+
+            int x = 1;
+
+            int triangularNumber = 1;
+
+            while (triangularNumber <= number) {
+                if (triangularNumber == number) {
+                    return true;
+                } else {
+                    x ++;
+                    triangularNumber += x;
+                }
+            }
+            return false;
+        }
+
+
+    }
+
 
 }
