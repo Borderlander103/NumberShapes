@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         String myAnswer;
 
-        if (myNumber.isTriangular()) {
+        if (myNumber.isTriangular() && myNumber.isSquare()) {
+            myAnswer = "is both Triangular and Square.";
+        } else if (myNumber.isTriangular()) {
             myAnswer = "is Triangular.";
         } else if (myNumber.isSquare()) {
             myAnswer = "is Square.";
