@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    class Number {
+    public class Number {
 
         int number;
 
@@ -54,8 +54,23 @@ public class MainActivity extends AppCompatActivity {
             }
             return false;
         }
+    }
 
-
+    class SquareNumber {
+        int number;
+        public boolean isSquare() {
+            int x = 1;
+            int squareNumber = 1;
+            while (squareNumber <= number) {
+                if (squareNumber == number) {
+                    return true;
+                } else {
+                    x += 2;
+                    squareNumber += x;
+                }
+            }
+            return false;
+        }
     }
 
 
