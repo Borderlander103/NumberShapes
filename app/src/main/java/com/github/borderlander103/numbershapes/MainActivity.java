@@ -19,17 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
         EditText mGuessView = findViewById(R.id.editText);
 
-        if (TextUtils.isEmpty(mGuessView.getText().toString())) {
-            Toast.makeText(this, "Please enter a number.", Toast.LENGTH_SHORT).show();
-            return;
-        } else if (Double.parseDouble(mGuessView.getText().toString()) != Math.floor(Double.parseDouble(mGuessView.getText().toString()))) {
-            Toast.makeText(this, "Please enter a whole number.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         Number myNumber = new Number();
 
-        myNumber.number = Integer.parseInt(mGuessView.getText().toString());
+        try {
+            myNumber.number = Integer.parseInt(mGuessView.getText().toString());
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Please input a whole number.", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         String myAnswer;
 
