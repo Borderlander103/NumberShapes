@@ -39,11 +39,8 @@ public class MainActivity extends AppCompatActivity {
         int number;
 
         public boolean isTriangular() {
-
             int x = 1;
-
             int triangularNumber = 1;
-
             while (triangularNumber <= number) {
                 if (triangularNumber == number) {
                     return true;
@@ -54,10 +51,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return false;
         }
-    }
-
-    class SquareNumber {
-        int number;
         public boolean isSquare() {
             int x = 1;
             int squareNumber = 1;
