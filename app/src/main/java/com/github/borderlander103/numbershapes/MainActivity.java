@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(mGuessView.getText().toString())) {
             Toast.makeText(this, "Please enter a number.", Toast.LENGTH_SHORT).show();
             return;
+        } else if (Double.parseDouble(mGuessView.getText().toString()) != Math.floor(Double.parseDouble(mGuessView.getText().toString()))) {
+            Toast.makeText(this, "Please enter a whole number.", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         Number myNumber = new Number();
