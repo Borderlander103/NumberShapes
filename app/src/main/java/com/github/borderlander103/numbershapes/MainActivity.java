@@ -18,19 +18,21 @@ public class MainActivity extends AppCompatActivity {
 
         EditText mGuessView = findViewById(R.id.editText);
 
-        String mGuessString = mGuessView.getText().toString();
-
-        int mGuessInt = Integer.parseInt(mGuessString);
-
         Number myNumber = new Number();
 
-        myNumber.number = mGuessInt;
+        myNumber.number = Integer.parseInt(mGuessView.getText().toString());
 
-        String answer;
+        String myAnswer;
 
-        answer = Boolean.toString(myNumber.isTriangular());
+        if (myNumber.isTriangular()) {
+            myAnswer = "is Triangular.";
+        } else if (myNumber.isSquare()) {
+            myAnswer = "is Square.";
+        } else {
+            myAnswer = "is neither Triangular or Square.";
+        }
 
-        Toast.makeText(this, answer, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Your number " + myAnswer, Toast.LENGTH_LONG).show();
 
     }
 
@@ -65,6 +67,5 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
-
 
 }
